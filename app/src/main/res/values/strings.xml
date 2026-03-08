@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Twitter</string>
-    <string name="action_message">test</string>
+
+    <!-- Page de login -->
+    <string name="label_loginTitle">Log in to Twitter</string>
+
+    <string name="img_logoAlt">Twitter Logo</string>
+
+    <string name="textBox_loginHint">Phone, email, or username</string>
+    <string name="textBox_pwHint">Password</string>
+
+    <string name="btn_login">Log in</string>
+
 </resources>
