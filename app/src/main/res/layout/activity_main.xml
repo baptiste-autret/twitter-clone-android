@@ -31,7 +31,7 @@
                 android:src="@drawable/logo" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/labelLoginTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_loginTitle"
@@ -49,9 +49,12 @@
                 android:ems="10"
                 android:hint="@string/textBox_loginHint"
                 android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:singleLine="true"
                 android:textColor="@color/black"
                 android:textColorHint="#D1A0A0A0"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/textboxPassword"
@@ -62,10 +65,12 @@
                 android:ems="10"
                 android:hint="@string/textBox_pwHint"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textColorHint="#D1A0A0A0"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="VisualLintTextFieldSize" />
 
             <Button
                 android:id="@+id/btnConnexion"
@@ -75,7 +80,8 @@
                 android:layout_marginTop="50dp"
                 android:backgroundTint="#912E8AF4"
                 android:text="@string/btn_login"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:ignore="VisualLintButtonSize" />
 
         </LinearLayout>
     </FrameLayout>
