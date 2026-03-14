@@ -1,11 +1,10 @@
 package com.example.twitter;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.InputFilter;
-import android.text.TextWatcher;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton play;
+    private Button btnConnexion;
+    private EditText editText;
+    private EditText editMdp;
+    private String valueId;
+    private String valueMdp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        btnConnexion = findViewById(R.id.btnConnexion);
         editText = findViewById(R.id.textboxIdentifiant);
+        editMdp = findViewById(R.id.textboxPassword);
+        valueId = editText.getText().toString();
+        valueMdp = editMdp.getText().toString();
 
         String blockedChars = " @#$/&é'(èçà)=,;:!<>&²³¹+*[]%ù€\"^×÷?";
 
@@ -44,6 +51,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                     return filtered.toString();
                 }
+        });
+
+        btnConnexion.setOnClickListener(v -> {
+
+            String valueId = editText.getText().toString();
+            String valueMdp = editMdp.getText().toString();
+
+            if (valueId.equals("admin") && valueMdp.equals("admin")) {
+
+                Intent intent = new Intent(MainActivity.this, pageAccueil.class);
+                startActivity(intent);
+
+            }
+
         });
 
     }
