@@ -1,10 +1,12 @@
 package com.example.twitter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,12 +16,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnConnexion;
     private EditText editText;
     private EditText editMdp;
-    private String valueId;
-    private String valueMdp;
+    private TextView labelError;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +33,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        btnConnexion = findViewById(R.id.btnConnexion);
+        Button btnConnexion = findViewById(R.id.btnConnexion);
         editText = findViewById(R.id.textboxIdentifiant);
         editMdp = findViewById(R.id.textboxPassword);
-        valueId = editText.getText().toString();
-        valueMdp = editMdp.getText().toString();
+        labelError = findViewById(R.id.labelError);
 
         String blockedChars = " @#$/&é'(èçà)=,;:!<>&²³¹+*[]%ù€\"^×÷?";
 
@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, pageAccueil.class);
                 startActivity(intent);
 
+            }
+            else if (valueId.isEmpty() || valueMdp.isEmpty()) {
+                labelError.setText("Empty login / password");
+                labelError.setVisibility(TextView.VISIBLE);
+            }
+            else {
+                labelError.setVisibility(TextView.VISIBLE);
+                labelError.setText("Incorrect login / password");
             }
 
         });
