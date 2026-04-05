@@ -11,6 +11,9 @@
     <string name="textView_error">Incorrect password or login</string>
     <string name="textView_errorLoginEmpty">Incorrect password or login</string>
 
+    <string name="username">[ USERNAME ]</string>
+    <string name="user_text">[ text ]</string>
+
     <string name="btn_login">Log in</string>
 
 </resources>
