@@ -8,5 +8,5 @@ Projet personnel pour m'entraîner au développement d'application.
 
 ---
 
-### 🟡 Statut
+### Statut
 **Projet en cours de développement**
