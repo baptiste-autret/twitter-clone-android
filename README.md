@@ -9,4 +9,4 @@ Projet personnel pour m'entraîner au développement d'application.
 ---
 
 ### Statut
-**Projet en cours de développement**
+**En cours de développement**
