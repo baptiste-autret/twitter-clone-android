@@ -6,4 +6,4 @@ Technologies utilisées :
 - Android Studio
 - Java
 
-Projet en cours de développement.
+**🟡 Projet en cours de développement.**
