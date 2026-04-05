@@ -2,10 +2,11 @@
 
 Projet personnel pour m'entraîner au développement d'application.
 
-Technologies utilisées :
+## Technologies utilisées
 - Android Studio
 - Java
 
+---
 
-
-**🟡 Projet en cours de développement.**
+### 🟡 Statut
+**Projet en cours de développement**
