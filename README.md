@@ -1,12 +1,12 @@
 # Twitter Clone
 
-Projet personnel pour m'entraîner au développement d'application.
+Personal project to practice application development.
 
-## Technologies utilisées
+## Technologies Used
 - Android Studio
 - Java
 
 ---
 
-### Statut
-**En cours de développement**
+### Status
+**In Progress**
